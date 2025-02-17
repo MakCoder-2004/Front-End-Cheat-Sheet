@@ -91,7 +91,7 @@ Alternatives to GitHub include **Bitbucket** and **GitLab**.
 
 5. **Adding the remote to coonect the GitHub repositoty** 
 ```bash 
-    git remote add <remote_name> <url>
+    git remote add <remote_name> <url>or<SSH key>
 ```
 6.  **Configuring username that uploads to the repository** 
 ```bash 
