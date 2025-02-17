@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Converter</title>
+
+    <link rel="stylesheet" href="DistanceConverter.css">
+</head>
+<body>
+    <h2>Distance Converter</h2>
+
+    <input type="number" id="number" placeholder="number">
+    <select name="unit" id="from">
+        <option value="miles">miles</option>
+        <option value="kilometers">Kilometers</option>
+        <option value="ft">ft</option>
+    </select>
+    <p>To</p>
+    <select name="unit" id="to">
+        <option value="miles">miles</option>
+        <option value="kilometers">Kilometers</option>
+        <option value="ft">ft</option>
+    </select>
+    <button class="btn-primary" onclick="convertDistance()">Convert</button>
+
+    <script src="DistanceConverter.js"></script>
+</body>
+</html>

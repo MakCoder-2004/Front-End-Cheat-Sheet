@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="ToDoList.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="todo-app">
+            <h2>ToDo List <img src="images/icon.png"></h2>
+
+            <div class="row">
+                <input type="text" class="taskInput" placeholder="Add a task...">
+                <input type="date" class="taskDueDate" >
+                <button class="btn-primary" onclick="addTask()">Add</button>
+            </div>
+
+            <div class="filter-buttons">
+                <button onclick="filterTasks('all')">Show All</button>
+                <button onclick="filterTasks('completed')">Show Completed</button>
+                <button onclick="filterTasks('active')">Show Active</button>
+            </div>
+            
+            <div class=" tasks-grid">
+                <ul class="taskList"> 
+                    <!-- Task items will be dynamically added here -->
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="ToDoList.js"></script>
+</body>
+</html>

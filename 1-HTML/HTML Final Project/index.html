@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makrious Ayman">
+    <meta name="description" content="This page is my final project of the HTML beginner course.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <title>Little Taco Shop</title>
+</head>
+<body>
+    <h1>Welcome To Little Taco Shop</h1>
+
+    <!-- NavBar -->
+    <nav>
+        <ul>
+            <li><a href="#About">About LTS</a></li>
+            <li><a href="#Menue">Menu</a></li>
+            <li><a href="Hours.html">Store Hours</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Image -->
+    <figure>
+        <img src="img/tacos_and_drink_400x267.png" alt="Taco Logo">
+        <figcaption>
+            Tacos and a Drink.
+        </figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- About Section -->
+    <section id="About">
+        <h2>About <abbr title="Little Taco Shop">LTS</abbr></h2>
+
+        <p>
+            <abbr title="Little Taco Shop">LTS</abbr> was founded in 2022. Our Shop was built from a <strong>Love of Tacos.</strong> We hope our shop adds a unique and interesting place to our little town.
+        </p>
+
+        <h3>Taco Trivia</h3>
+        <details>
+            <summary>When was the taco invented ?</summary>
+            <p>
+                Tacos were invented by Mexican immigrants in the 19th century. The name "taco" comes from the Spanish word "tacón," which means "bread slice."
+            </p>
+        </details>
+    </section>
+    
+    <hr>
+    <!-- Menu Section -->
+    <section id="Menue">
+        <h2>Our Menu</h2>
+
+        <table>
+            <caption>Our Tacos</caption>
+            <thead>
+                <tr>
+                    <th>Tacos</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Crunchy</td>
+                    <td>1</td>
+                    <td>$1.50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>$2.50</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>$3.25</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Soft</td>
+                    <td>1</td>
+                    <td>$2.00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>$3.50</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>$4.50</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Chips & Salsa</td>
+                    <td>$2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Any Extras $2 will be added</td>
+                </tr>
+            </tfoot>
+        </table>
+        <br>
+        <a href="#"> Back to Top </a>
+    </section>
+    
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; All rights reserved to The Little Taco Shop.</p>
+    </footer>
+</body>
+</html>

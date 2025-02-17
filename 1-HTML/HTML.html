@@ -1,0 +1,389 @@
+<!-- HTML Guide Sheet 
+    This is a guide to help you create a basic HTML document.
+    By: Makrious Ayman   LinkedIn:"https://www.linkedin.com/in/makrious-ayman-84985621b/"
+    Source : W3School / freeCodeCamp youtube course "https://youtu.be/kUMe1FH4CHE?si=CdMVeMcPa5mJN6n7"
+-->
+
+<!---------------------------------------------------------------------------------------------------------->
+
+<!-- Getting Started with the HTML file Format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <!--For putting all meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makrious Ayman">
+    <meta name="description" content="This page is a test for lraning HTML">
+
+    <title>Document</title> <!-- For The Web page Title  -->
+
+    <!-- For putting an icon in the head of the page beside the webpage title -->
+    <link rel="icon" href="YOUR ICON" type="image/x-icon"> 
+    
+    <!-- We put here also the links for our CSS files or any libraries -->
+    <link rel="stylesheet" href="YOUR CSS FILE" type="text/CSS">
+
+</head>
+
+<body>  <!-- The Contnt of the Web Page is written in the body-->
+
+    <!-- How we can write titles with different sizes, from (1 -> 6) the size is ascedndingly decreasing -->
+        <h1>This is a H1 heading</h1>
+        <h2>This is a H2 heading</h2>
+        <h3>This is a H3 heading</h3>
+        <h4>This is a H4 heading</h4>
+        <h5>This is a H5 heading</h5>
+        <h6>This is a H6 heading</h6>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+    <!-- How we can write a paragraph and some important text tags -->
+        <p>This is a paragraph. we can write any text here</p>
+    
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+    <!-- Inline Block tags -->
+        <!-- These inner tags are called inline blocks 
+            (They do not take space before or after as the block ones like <p> or <h1>, the are used to be insertes in block elements)
+        -->
+
+        <b>bold</b>, 
+        <i>italic</i>, 
+        <u>underlined</u>, 
+        <s>strikethrough</s>, 
+        <del>strikethrough (with line)</del>, 
+        <ins>inserted text</ins>, 
+        <sub>subscript</sub>, 
+        <sup>superscript</sup>, 
+        <mark>highlighted text</mark>, 
+        <small>small text</small>, 
+        <strong>big text</strong>, 
+        <code>code text</code>, 
+        <q>quoted text</q>, 
+        <abbr title="abbreviation">abbr</abbr>, 
+        <cite>cite</cite>, 
+        <dfn>definition term</dfn>, 
+        <var>variable</var>, 
+        <samp>sample output</samp>, 
+        <kbd>keyboard input</kbd>, 
+        <tt>teletype text</tt>, 
+        <a href="https://www.google.com">link</a>, 
+        <abbr title="abbreviation">abbr</abbr>
+        <span> </span>  <!-- Container -->
+        
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+    <!-- Adding horizontal lins  -->
+        <hr>
+    
+    <!----------------------------------------------------------------------------------------------------------> <br>
+    
+    <!-- Leaving line (break line)  -->
+        <br>
+    
+    <!----------------------------------------------------------------------------------------------------------> <hr><br>
+    
+    <!-- HTML Entities  -->
+        &nbsp;  <!-- Creating an extra space-->
+        &lt;    <!-- less than-->
+        &gt;    <!-- greater than-->
+        &copy;  <!-- copyright symbol -->
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+    <!-- List Types -->
+
+        <!-- Ordered list-->
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+
+        <!-- Unordered list-->
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        
+        <!-- Nested list-->
+            <ul>
+                <li>Item 1
+                    <ul>
+                        <li>Sub-item 1</li>
+                        <li>Sub-item 2</li>
+                    </ul>
+                </li>
+                <li>Item 2</li>
+                <li><p>The <b>Item 3</b> is put in a paragraph</p></li>
+            </ul>
+        
+        <!-- Description list-->
+            <dl>
+                <dt>Term 1</dt>     <!-- description term -->
+                <dd>Definition 1</dd>   <!-- description details -->
+                <dt>Term 2</dt>
+                <dd>Definition 2</dd>
+            </dl>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Adding images -->
+        <img src="/YOUR IMAGE URL" alt="Image Description" title="Test Image" width="200" height="200" loading="lazy">
+        <!-- loading="lazy" is used to make the images load faster as it downloads it before reaching to the image -->
+    
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Figure 
+        - Figures can be used to wrap images and captions -->
+        <figure>
+            <img src="/YOUR IMAGE URL" alt="Image Description" title="Test Image" width="200" height="200" loading="lazy">
+            <figcaption>This is a caption for the image.</figcaption>
+        </figure>
+    
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+    <!-- Semantic Tags
+     - Semantic HTML tags help with SEO and accessibility -
+     -->
+        <header> </header>   <!-- for the header part of the page -->
+        <nav> </nav>         <!-- for the navigation part of the page -->
+        <main> </main>       <!-- for the main content of the page -->
+        <aside> </aside>     <!-- for the sidebar content of the page -->
+        <footer> </footer>   <!-- for the footer part of the page -->
+        <article> </article> <!-- for writing articles in the html page -->
+        <details> 
+            <summary>Click to expand</summary>
+            <p>This is a more detailed information.</p>
+        </details> <!-- for more detailed information -->
+        <summary> </summary> <!-- for writing the title of the summary about a specific topic and the summary is wtitten in <p> after it both and written beneath <details> -->>
+        <time> </time>       <!-- for displaying dates and times -->
+        <section> </section> <!-- for grouping content together -->
+        <div> </div>         <!-- A block element for containing data -->
+        <span> </span>
+        <fieldset>  <!-- for containing the content in oune place under a title -->
+            <legend> Title </legend>    <!-- The Title of the fieldset-->
+        </fieldset> 
+     <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Adding links to other pages
+        - We put in the href a link for a website or another html file name  -->
+        <a href="https://www.google.com">Visit Google</a>
+
+        <!-- Adding links to external pages  -->
+        <a href="https://www.google.com" target="_blank">Visit Google in a new tab</a>
+    
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Contact
+        - This will allow the user to contact you -->
+
+        <!-- Email -->
+        <a href="mailto:YOUR_EMAIL@YOURDOMAIN.COM">Contact Me</a>
+
+        <!-- Phone -->
+        <a href="tel:+YOUR_PHONE_NUMBER">Call Me</a>
+
+        <!-- Address -->
+        <address>
+            Address: YOUR_ADDRESS<br>
+            City: YOUR_CITY<br>
+            State: YOUR_STATE<br>
+            Zip: YOUR_ZIP_CODE<br>
+            Country: YOUR_COUNTRY
+        </address>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Go to the Top -->
+        <p> 
+            <a href="#" >Top page</a>
+        </p>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Go toothe pages -->
+        <p> 
+            <a href="/HTMLsheet.html" >Home page</a>
+        </p>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Download 
+        - This will allow the user to download whatever you put -->
+        <a href="YOUR FILE" download>Download File</a>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+    <!-- Adding a table  -->
+        <table>
+            <caption> Table Title </caption> <!-- Title -->
+            <tr>    <!-- table row -->
+                <th>Header 1</th>   <!-- table header -->
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Row 1-2, Column 1</td>   <!-- table data, rowspan => no of rows to be taken -->
+                <td>Row 1, Column 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Column 1</td>
+            </tr>
+            <tr>
+                <td colspan="2">Row 3, Column 1-2</td>  <!-- colspan => no of columns to be taken -->
+            </tr>
+        </table>
+        
+        <style>
+            table, tr, th, td, caption {
+                border: 1px solid black;
+                font-family: 'Courier New', Courier, monospace;
+                border-collapse: collapse;
+                padding: 0.5rem;
+            }
+        </style>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Sections  -->
+        <section id="sec1">
+            <!-- we put in here the data we want in order to divide the web pages to sections to allow accessing it by its own id -->
+        </section>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Adding a form  -->
+        <form action="https://httpbin.org/get" method="get">
+            <!-- we put in here the form inputs -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <p>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"autocomplete="on" >
+                </p>
+                <p>
+                    <label for="gender">Gender:</label><br>
+
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label><br>
+                </p>
+                <p>
+                    <label for="country">Country:</label><br>
+                    <select id="country" name="country">
+                        <optgroup label="North America">
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="mexico">Mexico</option>
+                        </optgroup>
+                        <optgroup label="Africa">
+                            <option value="egypt" selected>Egypt</option>
+                            <option value="algeria" selected>Algeria</option>
+                            <option value="morroco" selected>Morroco</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                            <option value="uk">UK</option>
+                            <option value="australia">Australia</option>
+                            <option value="germany">Germany</option>
+                        </optgroup>
+                    </select><br>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" placeholder="example@example.com" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="paswword" name="password" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="Phone">Phone:</label><br>
+                    <input type="tel" id="Phone" name="Phone" placeholder="0120-566-5198" pattern="[0-9]{11}" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="year">Year of Birth:</label><br>
+                    <input type="number" id="year" name="year" min="1980" max="2025" value="2004" step="10">
+                </p>
+                <p>
+                    <label for="pets">Do you have pets ?</label><br>
+                    <input type="checkbox" id="dogs" name="pets" value="dogs">
+                    <label for="dogs">Dogs</label>
+                    <input type="checkbox" id="cats" name="pets" value="cats">
+                    <label for="cats">Cats</label>
+                    <input type="checkbox" id="fish" name="pets" value="fish">
+                    <label for="other">Fish</label>
+                    <input type="checkbox" id="other" name="pets" value="other">
+                    <label for="other">Other</label>
+                    <input type="checkbox" id="none" name="pets" value="none">
+                    <label for="none">None</label>
+                </p>
+                <p>
+                    <label for="message">Leave a Message !</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                </p>
+                <button type="submit">Submit</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+
+        <!-- 
+            we usually uses POST instead of GET
+            - GET is used to send data to the server in the URL
+            - POST is used to send data to the server in the request body
+            - POST is more secure and less prone to data leakage, but it has limitations regarding the size of the data and the number of requests you can send
+        -->
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+    <!-- Navbar  -->
+        <nav>
+            <!-- we put in here the links to other pages or sections -->
+            <ul>
+                <li>
+                    <a href="#sec1">Section1</a>
+                </li>
+                <li>
+                    <a href="#sec2">Section2</a>
+                </li>
+            </ul>
+        </nav>
+
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Footer  -->
+        <footer>
+            <!-- we put in here the footer information -->
+            <p>�� 2021 Your Name. All rights reserved.</p>
+        </footer>
+    
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+    
+    <!-- Data Attribute -->
+        <div data-product-name="Towel">
+        <p>Towel</p>
+        </div>
+        
+    <!----------------------------------------------------------------------------------------------------------><hr> <br>
+
+
+</body>
+
+</html>
+
+<!---------------------------------------------------------------------------------------------------------->
+
+<!-- For Validating and check our web page we can use "Validator.w3.org" 
+    => you can upload your page and it will check the errors in you page
+-->
+
+<!---------------------------------------------------------------------------------------------------------->

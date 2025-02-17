@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choice Selector</title>
+
+    <link rel="stylesheet" href="ChoiceSelector.css">
+</head>
+<body>
+    <h2>Choice Selector</h2>
+    
+    <label for="choices">Select your choice:</label> <br><br>
+    
+    <input type="checkbox" id="subscribed">
+    <label for="Subscribed">Subscribed</label> <br><br>
+    
+    <label for="choices" name="paymentMethod">Payment Method:</label> <br><br>
+    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+    <label for="creditCard">Credit Card</label> <br><br>
+    <input type="radio" id="MasterCard" name="paymentMethod" value="MasterCard">
+    <label for="MasterCard">MasterCard</label> <br><br>
+    <input type="radio" id="PayPal" name="paymentMethod" value="PayPal">
+    <label for="PayPal">PayPal</label> <br><br>
+
+    <button type="submit" id="send-data"> Submit </button>
+    
+    <script src="ChoiceSelector.js"></script>
+</body>
+</html>

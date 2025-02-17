@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makrious Ayman">
+    <meta name="description" content="This page is for contacting with Little taco Shop">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <title>Little Taco Shop</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+
+    <!-- NavBar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#About">About LTS</a></li>
+            <li><a href="index.html#Menue">Menue</a></li>
+            <li><a href="Hours.html">Store Hours</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Image -->
+    <figure>
+        <img src="img/tacos_close_up_400x260.png" alt="Taco Logo">
+        <figcaption>
+            Little Taco Shop Tacos.
+        </figcaption>
+    </figure>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Our Contact Form</h2>
+        <form action="submit.php" method="post">
+            <fieldset>
+                <legend>Send Us A Message</legend>
+    
+                <p>
+                    <label for="name">Name:</label> <br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label> <br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="message">Message:</label> <br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </p>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Location -->
+    <section id="address">
+        <h2>Our Location</h2>
+        <Address>
+            <strong>Little Taco Shop</strong><br>
+            123 Main St<br>
+            City, State 12345<br>
+            USA
+            Phone: <a href="tel:+201205665198">555-555-555</a>
+        </Address><br>
+    
+        <a href="#">Back To Top</a>
+    </section>
+
+    <hr>
+
+    
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; All rights reserved to The Little Taco Shop.</p>
+    </footer>
+</body>
+</html>

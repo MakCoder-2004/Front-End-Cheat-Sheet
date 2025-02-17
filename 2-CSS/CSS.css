@@ -1,0 +1,636 @@
+/* CSS Guide Sheet (Cascading Style Sheet)
+    This is a guide to help you create a basic HTML document.
+    By: Makrious Ayman   LinkedIn:"https://www.linkedin.com/in/makrious-ayman-84985621b/"
+    Source : W3School / freeCodeCamp youtube course "https://www.youtube.com/watch?v=OXGznpKZ_sA&t=3830s"
+*/
+
+ /* For Validating and check our web page we can use "https://jigsaw.w3.org/css-validator/" 
+    => you can upload your css file and it will check the errors
+ */
+
+ /* Specificity Calculator
+    - Calculate the priority of the selectors
+ */
+/*----------------------------------------------------------------------------------------------------------*/
+
+/* Syntax:
+selector{
+    declaration (property:property Value);
+}
+*/
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+/* Selectors 
+    - Selectors can be overriden by themselves.
+    - The Priority is for the written last
+    - calsses have higher priority than other selectors (ids > classes > Other Selectors)
+*/
+
+*{  /* Universal Selector => Selects all elements */
+    /* declaration */
+}
+
+body{
+    /* declaration */
+}
+
+p{
+    /* declaration */
+}
+
+h1, h2, h3, h4, h5, h6{
+    /* declaration */
+}
+
+span{
+    /* declareation */
+}
+
+button, input, textarea, select{    /* Dont inherit from other selectors */
+    /* declaration */
+}
+
+selector{
+    /* declaration*/ !important; /* => force to overide all the selectors */
+}
+
+.ClassName{     /* classes => Mostly used */
+    /* declaration */
+}
+
+#IdName{        /* IDs */
+    /* declaration */
+}
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------------------- */
+/*                                      Declarations                                  */
+/* ----------------------------------------------------------------------------------*/
+
+/* Colors 
+- coloors.com => for picking colors and palletes
+- https://coolors.co/contrast-checker/112a46-acc8e5 => checking colors' contrast */
+
+body{
+    background-color: #f1f1f1; /* background color */
+    color: #333; /* text color */
+}
+
+/*------------------------------------------------------------------------*/
+
+/* Units and Sizes 
+
+/-----------------------------------------------------------------------------/
+/                        Absolute length Units                                /
+/-----------------------------------------------------------------------------/
+| Unit | Description                                      | Example           |
+|------|--------------------------------------------------|-------------------|
+| px   | Pixels (1px = 1/96th of an inch)                 | font-size: 16px;  |
+| pt   | Points (1pt = 1/72nd of an inch)                 | font-size: 12pt;  |
+| pc   | Picas (1pc = 12 points)                          | font-size: 1pc;   |
+| in   | Inches (1in = 96px = 2.54cm)                     | width: 3in;       |
+| cm   | Centimeters (1cm = 37.8px)                       | height: 5cm;      |
+| mm   | Millimeters (1mm = 1/10th of cm)                 | margin: 10mm;     |
+| em   | Relative to the font size of the parent element  | font-size: 1.5em; |
+| rem  | Relative to the font size of the root element    | font-size: 1.2rem;|
+/-----------------------------------------------------------------------------/
+
+Explanation of em and rem:
+- em: This unit is relative to the font size of the parent element. 
+For example, if the parent element has a font size of 16px, then 1em = 16px, and 2em = 32px.
+- rem: This unit is relative to the font size of the root element (usually the <html> element). 
+For example, if the root element has a font size of 16px, then 1rem = 16px, and 2rem = 32px. 
+Unlike em, rem is not affected by the parent element's font size.
+
+*/
+
+/*------------------------------------------------------------------------*/
+
+/* Box Model */ 
+
+/* 
+Margin -> Border -> Padding -> "Content"
+*/
+.container{
+    
+    /* width and height */
+
+    width: auto;
+    height: auto;
+
+    /*------------------------------------------------------------*/
+    
+    /* margin */
+
+    margin: 0 auto; /* center align */
+    
+    /* or */
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 3em;
+    margin-right: 4em;
+    
+    /* or */
+    margin: 1em 2em 3em 4em; /* top, right, bottom, left */
+    
+    /*------------------------------------------------------------*/
+    
+    /* padding */
+    padding: 0 auto; /* center align */
+    
+    /* or */
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-left: 3em;
+    padding-right: 4em;
+    
+    /* or */
+    padding: 1em 2em 3em 4em; /* top, right, bottom, left */
+
+    /*------------------------------------------------------------*/
+    
+    /* border */
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333;
+    border-radius: 20px;
+
+    /* or */
+    border: 2px solid #333 10px; /* border: size style color raduis*/
+    
+    /* or */
+    border-top-width: 1px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 1px;
+    
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    
+    border-top-color: #333;
+    border-right-color: #333;
+    border-bottom-color: #333;
+    border-left-color: #333;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 40px;
+
+    
+    /* or */
+    border-width: 2px 1px 2px 1px; /* top, right, bottom, left */
+    border: 1px solid #333;
+    border-radius: 20px;
+    
+    /*------------------------------------------------------------*/
+    
+    /* Box Sizing */
+    box-sizing: content-box;    /*default*/
+    box-sizing: border-box;     /* when assigning a value to the width it will be on all the box not only the content*/
+    
+    /*------------------------------------------------------------*/
+    
+    /* Typography */
+    
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-transform: none;
+    text-decoration: none;
+    text-align: left;
+    
+    line-height: 30px; /*space btw each line*/
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    
+    word-wrap: break-word;
+    text-indent: 0px;
+    text-shadow: none;
+    
+    color: #333;
+    
+    background-color: transparent;
+    background-image: none;
+    background-repeat: repeat;
+    background-position: 0% 0%;
+    background-attachment: scroll;
+    background-clip: border-box;
+    
+    cursor: auto;
+    outline: none;
+    opacity: 1;
+    filter: none;
+    visibility: visible;
+    position: static;
+    
+    /*------------------------------------------------------------*/  
+
+}
+
+/* Pseudo Class */
+
+a:visited{
+    color: red;
+}
+
+a:hover, a:focus{
+    color: blue;
+    background-color: black;
+}
+
+a:active{
+    color: yellow;
+}
+
+/*------------------------------------------------------------*/
+
+/* Display 
+- we cannot apply a margin or assign a height to inline elements
+*/
+.display{
+    display: block;
+    display: inline-block;  /* inside the block only */
+    display: inline;    /* content only */
+}
+
+/*------------------------------------------------------------*/
+
+/* List Styles */
+
+ol{
+    list-style-type: lower-roman;
+
+    overflow: hidden;
+}
+
+.Unordered{
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url('checkmark.png');
+}
+
+ul li:nth-child(2){
+    background-color: yellow;
+}
+
+li{
+    list-style-type: none;
+    border: 1px solid black;
+} 
+/* converting a tag from inline-block to block */
+li a{
+    display: block;
+}
+
+::marker{
+    /* content: "*-"; */
+    font-size: 1.5em ;
+    color: red;
+}
+
+/*------------------------------------------------------------*/
+
+/* Float */
+
+.block{
+    width: 30vw;
+    height: 30vw;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.float-left{
+    float: left;
+    margin: 15px;
+}
+.float-right{
+    float: right;
+    margin: 15px;
+}
+.clear-float{
+    clear: left;
+}
+.clear-float-right{
+    clear: right;
+}
+section .bg{
+    background-color: rgb(255, 231, 201);
+    box-sizing: border-box;
+    overflow: auto;     /* controls the overflow of the data*/
+}
+
+/*------------------------------------------------------------*/
+
+/* Columns */
+
+.columns{
+    column-count: 4;
+    column-gap: 10px;
+    column-width: 10px;
+    column-rule: 2px solid black;
+}
+
+.columns h2{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    break-inside: avoid;
+}
+
+/*------------------------------------------------------------*/
+
+/* Wrapping */
+
+.quote{
+    font-size: 3rem;
+    text-align: center;
+    column-span: all;    
+}
+.noWrap{
+    white-space: nowrap;
+}
+
+/*------------------------------------------------------------*/
+
+/* Position */
+
+.outer-container {
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative; /* relative attribute specifies this box as the parent one*/
+}
+
+.inner-container {
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: #00f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.relative { /*relative to the current container wthout specifing one*/
+    background-color: #f00;
+    position: relative;
+    top: 150px;
+    left: 100px;
+}
+
+.fixed {
+    background-color: green;
+    position: fixed;
+    top: 100px;
+    visibility: hidden;
+}
+
+.sticky {
+    background-color: #000;
+    position: sticky;
+    top: 0;
+} 
+
+/*------------------------------------------------------------*/
+
+/* Flexbox */
+
+.flex-container {
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid #000;
+
+    display: flex;
+    gap: 1rem;
+
+    /* horizontal alligment */
+    justify-content: center;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    
+
+    /* vertical alligment */
+    align-items: center;
+    align-items: flex-start;
+    align-items: flex-end;
+
+    /* row alligment */
+    align-content: center;
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: space-around;
+    align-content: space-between;
+    align-content: space-evenly;
+   
+    /* direction of alligment */
+    flex-direction: row; /*default*/
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+
+    /* wrap */
+    flex-flow: row wrap;
+  } 
+  
+.flex-box {
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem;
+  
+    /* Sizing */
+    flex: 1 1 150px; /* grow shrink basis*/
+}
+  
+.box:nth-child(2) {
+    flex: 2 2 150px;
+    order: 1; /*The one with the hieght order moves to the last and vise-versa*/
+}
+
+/*------------------------------------------------------------*/
+
+/* Grid Layout */
+
+.grid-box {
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 50px auto 50px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+      "hd hd hd hd hd hd hd hd hd"   /* first row*/
+      "mn mn mn mn mn mn mn sb sb"   /* second row*/
+      "ft ft ft ft ft ft ft ft ft";  /* third row*/
+    column-gap: 0.5rem;
+}
+  
+.grid-container {
+    display: grid;
+
+    /* auto gridding rows/columns according to the space */
+    grid-auto-flow: row;
+    grid-auto-flow: column;
+    
+    /* gridding rows according to a specific size for each row */
+    grid-auto-rows: 1fr 2fr; 
+    grid-auto-rows: minmax(150px, auto);
+    
+    /* gridding columns according to a specific size for each column*/
+    grid-auto-columns: minmax(150px, auto);
+    grid-auto-columns: 250px;
+    
+   
+    /* grid template areas for each row*/
+    grid-template-rows: 1fr 6fr;
+    grid-template-rows: repeat(3, 100px);
+    
+    /* grid template areas for each row*/
+    grid-template-columns: 4fr 1fr ;
+    grid-template-columns: repeat(2, 1fr 2fr);
+
+
+    /* gaps */
+    row-gap: 1rem;
+    column-gap: 2rem;
+    /* OR */
+    gap: 1rem 2rem;
+
+    /* grid-area: mn; */
+    
+}
+
+.grid-box:first-child {
+    background-color: #00f;
+    
+    /* where rows starts and ends */
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* OR */
+    grid-row: 1 / 3;    /* Start / End */
+    
+    /* where columns starts and ends */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* OR */
+    grid-column: 1 / 3;    /* Start / End */
+
+    display: grid;
+    place-content: center end; /* alligning(vertically) , justifying (horizontally)*/
+}
+
+.el {
+    background-color: rebeccapurple;
+    color: #fff;
+    display: grid;
+    place-content: center;
+}
+
+.header {
+    grid-area: hd;
+}
+
+.sidebar {
+    grid-area: sb;
+    background-color: #00f;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+/*------------------------------------------------------------*/
+
+/* Images */
+
+.profile-pic-figure {
+    width: 35%;
+}
+  
+.profile-pic-figure img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    /* border-radius: 50%; */
+}
+  
+.image-div {
+    background-color: rgb(251, 210, 156);
+    background-image: url('checkmark.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.image {
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0, 0%, 100%, 0.35);
+
+}
+  
+/*------------------------------------------------------------*/
+
+/* Media Queries */
+
+/* syntax
+@media media type and(condition){
+    CSS properties;
+}
+*/
+
+/*------------------------------------------------------------*/
+
+/* Variables */
+
+:root {
+    /* var names prefered to me uppercase*/
+    --MAIN-COLOR: #00f;
+}
+
+.main-color-div {
+    color: var(--MAIN-COLOR);
+}
+
+/*------------------------------------------------------------*/
+

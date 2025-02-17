@@ -1,0 +1,15 @@
+*{
+    text-align: center;
+}
+
+#clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#clock{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
