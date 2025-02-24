@@ -1,7 +1,12 @@
 /* JavaScript Guide Sheet 
     This is a guide to help you code with JS for web pages
-    By: Makrious Ayman   LinkedIn:"https://www.linkedin.com/in/makrious-ayman-84985621b/"
-    Source : W3School / BroCode youtube course "https://www.youtube.com/watch?v=lfmg-EJ8gm4"
+    
+    By: Makrious Ayman   
+        LinkedIn:"https://www.linkedin.com/in/makrious-ayman-84985621b/"
+
+    Source : 
+        - W3School
+        - BroCode youtube course "https://www.youtube.com/watch?v=lfmg-EJ8gm4"
 */
 
 //---------------------------------------------------------------------------------------------------------->
@@ -1137,7 +1142,7 @@ const Setyear = date.setFullYear(2004);
 
 //---------------------------------------------------------------------------------------------------------->
 
-// OOP (Obhect Oriented Programming)
+// OOP (Object Oriented Programming)
 
 //Constructor
 function car(make, model, year, color){
