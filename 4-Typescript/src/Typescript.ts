@@ -27,10 +27,10 @@
     3- yarn add typescript ts-node -D
         => This will create a tsconfig.json file in the "devdependencies"
 
-    4- ts-node TypescriptFile.ts 
+    4- npx ts-node TypescriptFile.ts 
         => This will execute the file
 
-    5- tsc TypescriptFile.ts
+    5- npx tsc TypescriptFile.ts
         => This will compile the ts file to js file
 
     6- tsc TypescriptFile.ts -w
@@ -145,7 +145,10 @@ function HandleEError(err: string): never{
 const user = {
     name: "Makrious",
     age: 20,
-    isMarried: false
+    isMarried: false,
+    sayHello() {
+        return 'Hello !';
+    }
 }
 
 // We can use TS 's strength in defigning the type of each variable in the object
@@ -154,6 +157,10 @@ const user2: {
     age: number,
     isMarried: boolean
 } = user; 
+
+// Destructuring from an object
+const { sayHello } = user;
+console.log(sayHello());
 
 //---------------------------------------------------------------------------------------------------------->
 
@@ -644,6 +651,86 @@ function isAccountAdmin(user: user | admin){
         return user.isAdmin;
     }
 }
+//---------------------------------------------------------------------------------------------------------->
+
+// Synchronous VS Asynchronous programming
+/*
+    - Synchronous programming : 
+        => It means the program waits for a task to complete before moving on to the next task.
+    - Asynchronous programming : 
+        => It means the program can continue doing other tasks while waiting for a task to complete.
+*/
+
+//callback
+
+let todoList: {id: number, task: string}[] = [];
+
+function getToTodoList(callback: () => void) {
+
+    console.log("Fetching To Todo List ...");
+    
+    setTimeout(() => {
+        
+        todoList = [
+            {
+                id: 1,
+                task: "Task 1"
+            }
+        ]
+        
+        callback();
+        
+    }, 5000);
+}
+
+getToTodoList(() => {
+    console.log(todoList);
+    console.log("To Todo List Fetched");
+});
+
+
+//callback hell => a callback inside another callback function
+
+
+let todoList2: {id: number, task: string}[] = [];
+
+function getToTodoList2(callback: () => void) {
+
+    console.log("Fetching To Todo List ...");
+    
+    setTimeout(() => {
+        
+        todoList2 = [
+            {
+                id: 1,
+                task: "Task 1"
+            }
+        ]
+        
+        callback();
+        
+    }, 5000);
+}
+
+function fetchUser(callback: () => void) {
+    console.log("Fetching User Details...");
+    
+    setTimeout(() => {
+        
+        console.log("User 10 Fetched");
+        
+        callback();
+        
+    }, 3000);
+}
+
+fetchUser(() => {
+    getToTodoList2(() => {
+        console.log(todoList2);
+        console.log("Todo List and User Fetched");
+    });
+});
+
 //---------------------------------------------------------------------------------------------------------->
 
 export{}

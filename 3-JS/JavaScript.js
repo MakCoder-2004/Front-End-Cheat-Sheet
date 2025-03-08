@@ -959,8 +959,11 @@ const filteredElements = elements.filter(element => element % 2 === 0);
 // map the array
 const mappedElements = elements.map(element => element * 2);
 
+// some => returns a boolean value
+const hasEven = elements.some(element => element % 2 === 0);    // returns true if an even number is found
+
 //reduce the array -> reduce the array to a single value
-const sum = elements.reduce((previous, next) => previous + next, 0); //sum of the array
+const sum = elements.reduce((previous, next) => previous + next, 0/* initial value */); //sum of the array
 
 // slice array (copy the array elements into a new space )
 const slicedElements = elements.slice(1);
@@ -1421,6 +1424,16 @@ const student1 = new student("John", 30, "123 Main St", "New York", "NY");
 
 //---------------------------------------------------------------------------------------------------------->
 
+// Synchronous VS Asynchronous programming
+/*
+    - Synchronous programming : 
+        => It means the program waits for a task to complete before moving on to the next task.
+    - Asynchronous programming : 
+        => It means the program can continue doing other tasks while waiting for a task to complete.
+*/
+
+//---------------------------------------------------------------------------------------------------------->
+
 // Closure
 
 /*
@@ -1543,39 +1556,69 @@ walkDog(() => {
 
 /*
     - a promise is a JavaScript object that represents the eventual completion or failure of an asynchronous operation
-    - a promise has a status: pending, fulfilled, or rejected
+    - a promise has a status
+        => sender: resolved or rejected
+        => reciever: pending(default), fulfilled, or rejected
     - promises are created using the Promise constructor function
     - promises can be chained together using the then() and catch() methods
 */
 
-function walkDog(){
+function returnPromise(){
+
+    let promise =  new Promise((resolve, reject) => {
+        //code...
+        resolve("Success"); // fulfilled
+        reject("Failed"); // rejected
+    });
+    
+    return promise;
+}
+//or
+return new Promise((resolve, reject) => {
+    //code...
+    resolve("Success"); // fulfilled
+    reject("Failed"); // rejected
+});
+
+
+function fetchUser(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("Dog is walking");
+            resolve({name: "John", age: 30});
         }, 2000);
     });
 }
 
-function cookDinner(){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Dinner is being cooked");
-        }, 3000);
-    });
+//then(function) => on fullfiled
+fetchUser().then(user => { 
+    console.log(user);    
+    return user;
+});
+
+//another usage for then()
+function onSuccess(user){
+    console.log("Successfully Getting the User information");
+    if(user.name === "ADMIN"){
+        console.log("Welcome To Admin Dashboard");
+    }else{
+        console.log("Welcome User !");
+    }
+    console.log(user);
 }
 
-function cleanKitchen(){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("cleaning the kitchen");
-        }, 1000);
-    });
+function onError(){
+    console.error("Failed to get the User information");
 }
 
-walkDog().then(value => {console.log(value); return cookDinner()})
-   .then(value => {console.log(value); return cleanKitchen()})
-   .then(value => {console.log(value); console.log('Tasks are finished')})
-   .catch(error => {console.error("Error:", error)});
+fetchUser().then(onSuccess, onError);
+
+//catch(function) => on rejected
+fetchUser().then(user => { 
+    console.log(user);    
+    return user;
+}).catch(error => {
+    console.error(error);
+});
 
 //---------------------------------------------------------------------------------------------------------->
 
