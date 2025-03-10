@@ -74,224 +74,190 @@ In the TS file
 For more details, check the [Tailwind CSS documentation](https://tailwindcss.com/docs/functions-and-directives#directives).
 
 ---
-
 ## Typography
 
-### Default fonts :
-1. font-sans
-2. font-serif
-3. font-mono
+### Default Fonts
+- `font-sans`
+- `font-serif`
+- `font-mono`
 
-### How to use the fonts ?
+### How to Use the Fonts?
 ```html
-    <p class="font-sans ...">The quick brown fox ...</p>
-    <p class="font-serif ...">The quick brown fox ...</p>
-    <p class="font-mono ...">The quick brown fox ...</p>
+<p class="font-sans">The quick brown fox ...</p>
+<p class="font-serif">The quick brown fox ...</p>
+<p class="font-mono">The quick brown fox ...</p>
 ```
 
-### Custom font
+### Custom Font
 ```css
-    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-    @import "tailwindcss";
-    @theme {
-        --font-roboto: "Roboto", sans-serif; 
-    }
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
+@theme {
+    --font-roboto: "Roboto", sans-serif; 
+}
+```
+```html
+<p class="font-roboto">This will use Roboto font family.</p>
 ```
 
-```html
-    <p class="font-roboto">This will use Roboto font family.</p>
-```
+---
 
 ### Font Size
-- This is the order of the sizes from smaller to bigger.
+- Ordered from smaller to larger:
+  - `text-xs`
+  - `text-sm`
+  - `text-base`
+  - `text-lg`
+  - `text-xl`
+  - `text-2xl`
+  - ...
+  - `text-9xl`
 
-  text-xs  
-  text-sm  
-  text-base  
-  text-lg  
-  text-xl  
-  text-2xl  
-  text-2xl  
-  .  
-  .  
-  .  
-  text-9xl  
+#### Custom Text Size
+```html
+<p class="text-[14px]">Custom text size example</p>
+```
 
-- Custom text size    
-  text-[sizeValue]  
-
-  for ex:  
-  ```html
-      <p class="text-[14px] ...">
-          <!-- ... -->
-      </p>
-  ``` 
+---
 
 ### Line Height
-- We can customize the line height of our paragraph element.  
+- `leading-none`
+- `text-sm/6`
+- `text-sm/7`
+- `text-sm/8`
 
-    leading-none  
-    text-sm/6  
-    text-sm/7  
-    text-sm/8  
-  
-### Customizing Font Size
+#### Customizing Line Height
 ```css
-    @theme {
-        --text-tiny: 0.625rem; 
-    }
+@theme {
+    --text-tiny: 0.625rem; 
+}
 ```
 ```html
-    <div class="text-tiny">
-        <!-- ... -->
-    </div>
+<div class="text-tiny">Custom line height example</div>
 ```
+
+---
 
 ### Font Style
-`italic`        
-`underline`  
+- `italic`
+- `underline`
 
 ### Font Weight
-- This is the order of the weight from thinner to bolder.  
+- Ordered from thinner to bolder:
+  - `font-thin`
+  - `font-extralight`
+  - `font-light`
+  - `font-normal`
+  - `font-medium`
+  - `font-semibold`
+  - `font-bold`
+  - `font-extrabold`
+  - `font-black`
 
-    font-thin  
-    font-extralight  
-    font-light  
-    font-normal  
-    font-medium  
-    font-semibold  
-    font-bold  
-    font-extrabold  
-    font-black  
-
-### Customizing Font Weight
+#### Customizing Font Weight
 ```css
-    @theme {
-        --font-weight-extrablack: 1000; 
-    }
+@theme {
+    --font-weight-extrablack: 1000; 
+}
 ```
 ```html
-    <div class="font-extrablack">
-        <!-- ... -->
-    </div>
+<div class="font-extrablack">Custom font weight</div>
 ```
+
+---
 
 ### Numeric Fonts
-- This are classes to deal with numbers  
-    normal-nums  
-    ordinal  
-    slashed-zero  
+- `normal-nums`
+- `ordinal`
+- `slashed-zero`
+- `lining-nums`
+- `oldstyle-nums`
+- `proportional-nums`
+- `tabular-nums`
+- `diagonal-fractions`
+- `stacked-fractions`
 
-    lining-nums  
-    oldstyle-nums  
-    proportional-nums  
-    tabular-nums  
-
-    diagonal-fractions  
-    stacked-fractions  
+---
 
 ### Letter Spacing
-- This is the order of the spacing from tighter to wider.    
+- Ordered from tighter to wider:
+  - `tracking-tighter`
+  - `tracking-tight`
+  - `tracking-normal`
+  - `tracking-wide`
+  - `tracking-wider`
+  - `tracking-widest`
 
-    tracking-tighter    
-    tracking-tight    
-    tracking-normal  
-    tracking-wide   
-    tracking-wider  
-    tracking-widest  
+---
 
 ### Line Clamping
-- Utilities for clamping text to a specific number of lines.  
-    line-clamp-Number   
-    line-clamp-none  
+- `line-clamp-{number}`
+- `line-clamp-none`
 
-For ex;
+#### Example
 ```html
-<article>
-  <time>Mar 10, 2020</time>
-  <h2>Boost your conversion rate</h2>
-  <p class="line-clamp-3">
-    Nulla dolor velit adipisicing duis excepteur esse in duis nostrud occaecat mollit incididunt deserunt sunt. Ut ut
-    sunt laborum ex occaecat eu tempor labore enim adipisicing minim ad. Est in quis eu dolore occaecat excepteur fugiat
-    dolore nisi aliqua fugiat enim ut cillum. Labore enim duis nostrud eu. Est ut eiusmod consequat irure quis deserunt
-    ex. Enim laboris dolor magna pariatur. Dolor et ad sint voluptate sunt elit mollit officia ad enim sit consectetur
-    enim.
-  </p>
-  <div>
-    <img src="/img/lindsay.jpg" />
-    Lindsay Walton
-  </div>
-</article>
+<p class="line-clamp-3">Truncated text with line clamping.</p>
 ```
 
-### List Style Image
-- Utilities for controlling the marker images for list items.  
-    list-image-[URL]
+---
 
-for ex ;
+### List Style Image
 ```html
 <ul class="list-image-[url(/img/checkmark.png)]">
   <li>5 cups chopped Porcini mushrooms</li>
-  <!-- ... -->
 </ul>
 ```
 
 ### List Style Position
-- Utilities for controlling the position of bullets and numbers in lists.  
-![list-inside VS list-outside](./images/list-inside%20vs%20list-outside.png)
+![List Inside vs List Outside](./images/list-inside%20vs%20list-outside.png)
 
 ### List Style Type
-- Utilities for controlling the marker style of a list.  
-![list-style](./images/list-style.png)
+![List Style](./images/list-style.png)
 
-### Text Allign
-- Utilities for controlling the alignment of text.    
-    text-left  
-    text-center  
-    text-right  
-    text-justify  
-    text-start  
-    text-end  
+---
+
+### Text Alignment
+- `text-left`
+- `text-center`
+- `text-right`
+- `text-justify`
+- `text-start`
+- `text-end`
 
 ### Text Color
-- Utilities for controlling the text color of an element.  
-    text-colorName-Degree  
+- `text-{color}-{degree}`
+- `text-{color}-{degree}/opacityPercent`
 
-- Utilities for controlling the opacity of the text color of an element.     
-    text-colorName-Degree/opacityPercent
+---
 
-### Text Decoration Line
-    underline  
-    overline  
-    line-through  
-    no-underline   
-    
-### Text Decoration Line Color
-- Utilities for controlling the color of text decorations.  
-    decration-colorName-Degree
+### Text Decoration
+#### Line
+- `underline`
+- `overline`
+- `line-through`
+- `no-underline`
 
-### Text Decoration Line Style
-- Utilities for controlling the style of text decorations.  
+#### Color
+- `decoration-{color}-{degree}`
+
+#### Style
 ![Text Decoration Line Style](./images/text%20decoration%20line%20style.png)
 
-### Text Decoration Line Thickness
-- Utilities for controlling the thickness of text decorations.  
-![Text Decoration Line Style](./images/decoration%20line%20thickness.png)
+#### Thickness
+![Decoration Line Thickness](./images/decoration%20line%20thickness.png)
 
-### Text Underline Offset
-- Utilities for controlling the offset of a text underline.  
-![Text Decoration Line Style](./images/text%20underline%20offset.png)
+#### Underline Offset
+![Text Underline Offset](./images/text%20underline%20offset.png)
+
+---
 
 ### Text Transform
-- Utilities for controlling the capitalization of text.
-    uppercase  
-    lowercase  
-    capitalize  
-    normal-case  
+- `uppercase`
+- `lowercase`
+- `capitalize`
+- `normal-case`
 
 ### Text Overflow
-- Utilities for controlling how the text of an element overflows.
-
 | Utility        | Description |
 |---------------|------------|
 | `truncate`    | Prevents text from wrapping and truncates overflowing text with an ellipsis (…) if needed. |
@@ -299,43 +265,36 @@ for ex ;
 | `text-clip`   | Truncates the text at the limit of the content area. |
 
 ### Text Wrap
-- Utilities for controlling how text wraps within an element.  
-    text-wrap  
-    text-nowrap  
-    text-balance  
-    text-pretty  
+- `text-wrap`
+- `text-nowrap`
+- `text-balance`
+- `text-pretty`
 
 ### Text Indent
-- Utilities for controlling the amount of empty space shown before text in a block.  
-    indent-number  
-for ex ;  
-![Text Decoration Line Style](./images/text-indent.png)
+- `indent-{number}`  
+![Text Indent](./images/text-indent.png)
 
 ### Vertical Align
-- Utilities for controlling the vertical alignment of an inline or table-cell box.
-    align-baseline  
-    align-middle  
-    align-bottom  
-    align-text-top  
-    align-text-bottom 
-    align-sub  
-    align-super  
+- `align-baseline`
+- `align-middle`
+- `align-bottom`
+- `align-text-top`
+- `align-text-bottom`
+- `align-sub`
+- `align-super`
 
 ### White Space
-- Utilities for controlling an element's white-space property.
-    whitespace-normal  
-    whitespace-nowrap  
-    whitespace-pre  
-    whitespace-pre-line  
-    whitespace-pre-wrap  
-    whitespace-break-spaces  
+- `whitespace-normal`
+- `whitespace-nowrap`
+- `whitespace-pre`
+- `whitespace-pre-line`
+- `whitespace-pre-wrap`
+- `whitespace-break-spaces`
 
 ### Content
-- Utilities for controlling the content of the before and after pseudo-elements.
-    content-[Element]
-    before:content-[Element]
-    after:content-[Element]
----
+- `content-[Element]`
+- `before:content-[Element]`
+- `after:content-[Element]`
 
 ## Layout
 ---
