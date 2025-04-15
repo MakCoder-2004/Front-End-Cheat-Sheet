@@ -5,8 +5,12 @@
 
 ## UI Components
 - [Headless UI](https://headlessui.com/)
-- [Framer]()
+- [Framer](https://www.framer.com/)
 - [nsui](https://nsui.irung.me/)
+- [UIverse](https://uiverse.io/)
+- [AceternityUI](https://ui.aceternity.com/)
+- [Ant Design](https://ant.design/)
+- [Material UI](https://mui.com/material-ui/a)
 
 ## API JSON Files
 - [dummyJSON](https://dummyjson.com/)
