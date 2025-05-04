@@ -10,7 +10,8 @@
 - [UIverse](https://uiverse.io/)
 - [AceternityUI](https://ui.aceternity.com/)
 - [Ant Design](https://ant.design/)
-- [Material UI](https://mui.com/material-ui/a)
+- [Material UI](https://mui.com/material-ui/)
+- [Chakra UI](https://chakra-ui.com/docs/get-started/installation)
 
 ## API JSON Files
 - [dummyJSON](https://dummyjson.com/)
